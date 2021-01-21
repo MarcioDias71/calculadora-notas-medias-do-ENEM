@@ -4,36 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Notas ENEM</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    
+
+ 
 </head>
 <body>
     <div id="app">
         <p>Por favor, digite sua pontuação e o respectivo peso para cada campo.</p>
         <label for="lct">Linguagens, Códigos e suas Tecnologias:</label>
-            <input type="text" name="lct" required autofocus>
+            <input type="text" name="lct" id="lct" required autofocus>
         <label for="p1"></label>
-            Peso: <input type="number" name="p1" min="1">
+            Peso: <input type="number" name="p1" id = "p1" min="1">
         <br><br>
         <label for="cht">Ciências Humanas e suas Tecnologias:</label>
-            <input type="text" name ="cht" required>
+            <input type="text" name ="cht" id= "cht" required>
         <label for="p2"></label>
-            Peso: <input type="number" name="p2" min="1">
+            Peso: <input type="number" name="p2" id = "p2" min="1">
         <br><br>
         <label for="cnt">Ciências da Natureza e suas Tecnologias:</label>
-            <input type="text" required>
+            <input type="text" name="cnt" id="cnt"required>
         <label for="p3"></label>
-            Peso: <input type="number" name="p3" min="1">
+            Peso: <input type="number" name="p3" id="p3" min="1">
         <br><br>
         <label for="mt">Matemática e suas Tecnologias:</label>
-            <input type="text" name="mt" required>
+            <input type="text" name="mt" id="mt" required>
         <label for="p4"></label>
-            Peso: <input type="number" name="p4" min="1">
+            Peso: <input type="number" name="p4" id ="p4" min="1">
         <br><br>
         <label for="red">Redação:</label>
-            <input type="text" name="red" required>
+            <input type="text" name="red" id="red" required>
         <label for="p5"></label>
-            Peso: <input type="number" name="p5" min="1">
+            Peso: <input type="number" name="p5" id="p5" min="1">
         <br><br>
-        <button type="submit">Calcular Médias</button>
+        <div id="event-handling">
+            <p>Média Aritmética: {{message}}</p>
+            <p>Média Ponderada: {{messagen}}</p>
+            <button type="submit" v-on:click="calcMedia">Calcular Médias</button>       
+         </div>
+
+       
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
